@@ -27,6 +27,7 @@ check('functional controls',()=>{for(const x of ['portfolio-search','directory-s
 check('monochrome design and motion reduction',()=>{assert.match(css,/prefers-reduced-motion/);assert.match(css,/--black:/);});
 check('JS implementation',()=>{for(const x of ['showModal','updatePhotos','updateDirectory','aria-pressed'])assert.ok(js.includes(x),x);});
 check('expanded editorial copy ~5x',()=>assert.ok(words >= 7145,'Only '+words+' words; target >= 7145'));
+check('Schema.org Person and WebSite graph',()=>{const raw=html.match(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/)?.[1];assert.ok(raw,'Missing JSON-LD');const graph=JSON.parse(raw);const types=(graph['@graph']||[]).map(x=>x['@type']);assert.ok(types.includes('Person'));assert.ok(types.includes('WebSite'));});
 check('no inline styling',()=>assert.doesNotMatch(html,/\sstyle="/));
 console.log('\nAtlas 3.0 audit:',{words,ratio:(words/1429).toFixed(2),images:images.length,sections:expected.length,failures:failures.length});
 if(failures.length)process.exitCode=1;
