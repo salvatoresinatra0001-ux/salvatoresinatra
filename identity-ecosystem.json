@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "as_of": "2026-10-19",
+  "owner": "Salvatore Sinatra",
+  "canonical_requested": "https://www.salvatoresinatra.it/",
+  "canonical_domain_verified": false,
+  "production": {
+    "repository": "salvatoresinatra0001-ux/salvatoresinatra",
+    "branch": "main",
+    "netlify_site": "salvatoresinatra-production",
+    "netlify_site_id": "aff847eb-27b1-49b5-99ac-5ba56f015fdb",
+    "public_url": "https://salvatoresinatra-production.netlify.app/",
+    "last_verified_sha": "66f89cab33d5435d38cd9c1bf1050f6d35b60a33",
+    "last_verified_deploy": "6ad5b3ee919e57eb4248ac37"
+  },
+  "repositories": [
+    {
+      "name": "salvatoresinatra",
+      "role": "canonical identity source",
+      "domain": "www.salvatoresinatra.it",
+      "domain_verified": false
+    },
+    {
+      "name": "salvatore-sinatra-it",
+      "role": "historical Italian V10",
+      "domain": "www.salvatore-sinatra.it",
+      "domain_verified": false
+    },
+    {
+      "name": "salvatore-sinatra-web",
+      "role": "identity atlas and LuceVision archive",
+      "domain": null,
+      "domain_verified": false
+    },
+    {
+      "name": "salvatoresinatraphotography",
+      "role": "independent photography portfolio",
+      "domain": "www.salvatoresinatraphotography.it",
+      "domain_verified": false
+    },
+    {
+      "name": "salvatoresinatra0001-ux.github.io",
+      "role": "GitHub Pages identity hub",
+      "domain": "salvatoresinatra0001-ux.github.io",
+      "domain_verified": false
+    }
+  ],
+  "do_not_auto_redirect": true,
+  "master_photographs_unchanged": true
+}
