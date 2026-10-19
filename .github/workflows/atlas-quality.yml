@@ -16,3 +16,5 @@ jobs:
         run: node --check assets/site.js
       - name: Run static quality audit
         run: node tests/atlas-audit.mjs
+      - name: Verify identity ecosystem registry
+        run: node tests/identity-ecosystem-audit.mjs
