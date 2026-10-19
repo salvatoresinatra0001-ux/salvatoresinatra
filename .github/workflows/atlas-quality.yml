@@ -9,11 +9,9 @@ permissions:
 jobs:
   quality:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Check JavaScript syntax
         run: node --check assets/site.js
       - name: Run static quality audit
