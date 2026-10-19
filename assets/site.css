@@ -11,3 +11,6 @@
 
 /* Long-form editorial details: native keyboard and screen-reader support */
 .atlas-deepdive{max-width:1080px;margin:60px 0 0 auto;border-top:1px solid #666;border-bottom:1px solid #555;padding:0}.atlas-deepdive summary{cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;list-style:none}.atlas-deepdive summary::-webkit-details-marker{display:none}.atlas-deepdive summary span{font-size:28px;font-weight:300;transition:transform .2s}.atlas-deepdive[open] summary span{transform:rotate(45deg)}.atlas-deepdive-content{padding:5px 0 25px}.atlas-deepdive-content p{font-size:clamp(1rem,1.5vw,1.35rem);line-height:1.85;color:#c0c0be;margin:20px 0 30px}.atlas-deepdive-content strong{color:#f3f1ed}.atlas-deepdive-content em{font-family:Georgia,serif;color:#dededb}.atlas-deepdive:focus-within{border-color:#aaa}@media(prefers-reduced-motion:reduce){.atlas-deepdive summary span{transition:none}}
+
+/* Reserve image space without cropping original compositions */
+.photo-item img{aspect-ratio:4/3;object-fit:contain}.photo-item.photo-tall img{aspect-ratio:3/4}.photo-item.photo-last img{aspect-ratio:16/10}@media(max-width:600px){.photo-item img,.photo-item.photo-tall img,.photo-item.photo-last img{height:auto;max-height:70vh;object-fit:contain}}
