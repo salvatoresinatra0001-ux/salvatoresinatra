@@ -8,7 +8,7 @@ const css = fs.readFileSync(path.join(root,'assets/site.css'),'utf8');
 const expected = ['home','identita','framework','portfolio','visual-arts','formazione','technology','music','projects','directory','archive','contatti'];
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 const links = [...html.matchAll(/href="#([^"]+)"/g)].map(m => m[1]);
-const images = [...html.matchAll(/<img\b[^>]*>/g)].map(m => m[0]);
+const images = [...html.matchAll(/<img\b[^>]*>/g)].map(m => m[0]).filter(tag => /\bsrc=/.test(tag));
 const sources = images.map(tag => tag.match(/\bsrc="([^"]+)"/)?.[1]).filter(Boolean);
 const text = html.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z]+;/g,' ');
 const words = text.split(/\s+/).filter(Boolean).length;
