@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const root=JSON.parse(fs.readFileSync("identity-ecosystem.json","utf8"));
+const names=root.repositories.map(x=>x.name);
+assert.equal(names.length,new Set(names).size,"Duplicate identity repositories");
+assert.equal(root.production.repository,"salvatoresinatra0001-ux/salvatoresinatra");
+assert.equal(root.production.branch,"main");
+assert.equal(root.do_not_auto_redirect,true);
+assert.equal(root.master_photographs_unchanged,true);
+assert.equal(root.canonical_domain_verified,false,"Update verification evidence before marking domain verified");
+assert.ok(root.repositories.some(x=>x.name==="salvatore-sinatra-it"&&x.domain==="www.salvatore-sinatra.it"));
+assert.ok(root.repositories.some(x=>x.name==="salvatoresinatra"&&x.domain==="www.salvatoresinatra.it"));
+assert.equal(root.canonical_requested,"https://www.salvatoresinatra.it/");
+console.log("PASS identity ecosystem consistency:",names.length,"repositories and distinct domains");
