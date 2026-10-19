@@ -1,0 +1,20 @@
+name: Atlas 3.0 — Static Quality Gate
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, website-identity-final-v1-20261019]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check assets/site.js
+      - name: Run static quality audit
+        run: node tests/atlas-audit.mjs
