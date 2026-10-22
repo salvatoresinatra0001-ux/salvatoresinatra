@@ -16,3 +16,13 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/identity-atlas-v500/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://www.google.com; font-src 'self'; connect-src 'self'; frame-src 'self' https://c51f5f9b62.clvaw-cdnwnd.com; upgrade-insecure-requests"
+    Cache-Control = "public, max-age=3600"
