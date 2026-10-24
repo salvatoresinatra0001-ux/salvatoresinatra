@@ -1,0 +1,22 @@
+/* Salvatore Sinatra — site-safe theme overrides, V2.1. Images are intentionally unaffected. */
+.ss-theme-switch{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:10000;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border-radius:999px;border:1px solid currentColor;background:#080808;color:#fff;font:600 12px/1.2 system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;box-shadow:0 4px 18px #0005}
+.ss-theme-switch:focus-visible{outline:3px solid #818cf8;outline-offset:3px}
+html[data-ss-theme="light"]{color-scheme:light;--black:#fafaf8;--white:#171717;--grey:#525252;--border:#d5d5d5;--ink:#181818;--muted:#565656;--line:#d5d5d5}
+html[data-ss-theme="light"] body{background:#fafaf8!important;color:#171717!important}
+html[data-ss-theme="light"] :is(header,footer,.top,.site-header,.footer,.foot,.bar,.social-home,.social-widget,.tile,.item,.card,.contact-section,.contact,.section,main,aside){color:#171717}
+html[data-ss-theme="light"] :is(header,footer,.top,.site-header,.footer,.foot,.bar,.social-home,.social-widget){background-color:#fafaf8!important;border-color:#d0d0d0!important}
+html[data-ss-theme="light"] :is(p,.copy,.lead,.intro,.note,.eyebrow,.tag,.tile p,.item p,figcaption,small){color:#454545!important}
+html[data-ss-theme="light"] :is(h1,h2,h3,h4,a,.brand,.wordmark,.logo){color:#171717}
+html[data-ss-theme="light"] :is(.button,.ss-theme-switch){background:#fff;color:#171717;border-color:#777}
+html[data-ss-theme="light"] :is(.hero,.view,.hero-bottom,.grid,.tiles){background-color:transparent}
+html[data-ss-theme="light"] :is(.ss-photo-gallery-v10,#ss-photo-gallery-v10){background:#f3f3f1!important;color:#171717!important}
+html[data-ss-theme="light"] :is(.ss-photo-gallery-v10,#ss-photo-gallery-v10) :is(h2,h3,p,figcaption){color:#171717!important}
+html[data-ss-theme="dark"]{color-scheme:dark;--black:#000;--white:#fafafa;--grey:#bbb;--border:#343434;--ink:#fafafa;--muted:#bbb;--line:#343434}
+html[data-ss-theme="dark"] body{background:#000!important;color:#fafafa!important}
+html[data-ss-theme="dark"] :is(header,footer,.top,.site-header,.footer,.foot,.bar,.social-home,.social-widget){background-color:#000!important;color:#fafafa;border-color:#343434!important}
+html[data-ss-theme="dark"] :is(p,.copy,.lead,.intro,.note,.eyebrow,.tag,.tile p,.item p,figcaption,small){color:#c5c5c5}
+html[data-ss-theme="dark"] :is(h1,h2,h3,h4,a,.brand,.wordmark,.logo){color:#fafafa}
+html[data-ss-theme="dark"] .ss-theme-switch{background:#000;color:#fff;border-color:#bbb}
+html[data-ss-theme="dark"] :is(.ss-photo-gallery-v10,#ss-photo-gallery-v10){background:#080808!important;color:#fafafa!important}
+@media(max-width:600px){.ss-theme-switch{font-size:11px;padding:10px 12px;max-width:calc(100vw - 32px)}}
+@media(prefers-reduced-motion:reduce){.ss-theme-switch{transition:none}}
