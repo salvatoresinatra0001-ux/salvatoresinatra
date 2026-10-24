@@ -20,3 +20,24 @@ html[data-ss-theme="dark"] .ss-theme-switch{background:#000;color:#fff;border-co
 html[data-ss-theme="dark"] :is(.ss-photo-gallery-v10,#ss-photo-gallery-v10){background:#080808!important;color:#fafafa!important}
 @media(max-width:600px){.ss-theme-switch{font-size:11px;padding:10px 12px;max-width:calc(100vw - 32px)}}
 @media(prefers-reduced-motion:reduce){.ss-theme-switch{transition:none}}
+
+/* V2.1.1: accessible Atlas surfaces in both themes. No image rules. */
+html[data-ss-theme="light"]{--gray:#525252;--dark:#f0f0ed}
+html[data-ss-theme="light"] .nav{background:#fafaf8}
+html[data-ss-theme="light"] .nav a,
+html[data-ss-theme="light"] .nav a:hover,
+html[data-ss-theme="light"] .nav a:focus-visible,
+html[data-ss-theme="light"] .nav a[aria-current="location"]{color:#171717}
+html[data-ss-theme="light"] .nav-toggle span{background:#171717}
+html[data-ss-theme="light"] :is(.hero-baseline,.section-meta,.section-overline,.collection-sub,.academic-label,.atlas-pending){color:#525252}
+html[data-ss-theme="light"] :is(.atlas-longform,.atlas-deepdive-content) :is(strong,em){color:#242424}
+html[data-ss-theme="light"] .atlas-archive-grid article{background:#f0f0ed}
+html[data-ss-theme="light"] .atlas-search{background:#fff;color:#171717;border-color:#666}
+html[data-ss-theme="light"] .atlas-search::placeholder{color:#595959}
+html[data-ss-theme="light"] .atlas-filters button{color:#242424;border-color:#666}
+html[data-ss-theme="light"] .atlas-filters button:is(:hover,[aria-pressed="true"]){background:#242424;color:#fff;border-color:#242424}
+html[data-ss-theme="light"] :focus-visible{outline-color:#171717}
+html[data-ss-theme="light"] .atlas-lightbox{background:#fafaf8;color:#171717}
+html[data-ss-theme="light"] .atlas-lightbox button{color:#171717}
+html[data-ss-theme="dark"] .contact-section{background:#000;color:#fafafa}
+html[data-ss-theme="dark"] .contact-actions>a{border-color:#aaa}
