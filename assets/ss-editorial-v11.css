@@ -51,3 +51,10 @@ body{font-kerning:normal;text-rendering:optimizeLegibility}
 @media(max-width:900px){.ss11-network{grid-template-columns:1fr;gap:18px}.ss11-network__links{border-top:1px solid var(--ss11-line)}}
 @media(max-width:620px){.ss11-network{padding:24px 6vw}.ss11-network__links{grid-template-columns:1fr;border-left:0}.ss11-network__link{flex-direction:row;justify-content:space-between;gap:20px;border-right:0;border-bottom:1px solid var(--ss11-line);padding:16px 0}.ss11-network__link span{font-size:12px}.ss11-lightbox__caption{font-size:10px}.ss11-lightbox__nav{flex-wrap:wrap}.ss11-lightbox__nav button{flex:1}}
 @media(prefers-reduced-motion:reduce){.ss11-progress,.ss11-network__link,:where(.service,.item,.atlas-pillar-grid article,.atlas-project-list article,.atlas-directory article,.collection){transition:none!important}}
+
+/* V11.1 — monochrome contrast, navigation and safe visual defaults */
+:where(.top .nav a,body>header nav a)[aria-current="location"]{color:var(--ss11-ink);text-decoration:underline;text-decoration-color:var(--ss11-muted);text-underline-offset:8px}
+html[data-ss-theme="light"] #ss-photo-gallery-v10 figure{background:#eeede8;border-color:var(--ss11-line)}
+html[data-ss-theme="light"] #ss-photo-gallery-v10 .ss11-photo-trigger img{background:#e5e4df}
+html[data-ss-theme="light"] #ss-photo-gallery-v10 figcaption{color:#33332f}
+html[data-ss-theme="light"] .ss11-progress{background:#222}
