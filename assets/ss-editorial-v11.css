@@ -58,3 +58,12 @@ html[data-ss-theme="light"] #ss-photo-gallery-v10 figure{background:#eeede8;bord
 html[data-ss-theme="light"] #ss-photo-gallery-v10 .ss11-photo-trigger img{background:#e5e4df}
 html[data-ss-theme="light"] #ss-photo-gallery-v10 figcaption{color:#33332f}
 html[data-ss-theme="light"] .ss11-progress{background:#222}
+
+/* V11.2 — prevent ultra-narrow Atlas typography from extending beyond the viewport */
+@media(max-width:360px){
+  .site-header + main .hero h1{font-size:clamp(2.55rem,12vw,3.1rem);letter-spacing:-.09em}
+  .site-header + main .display-title{font-size:clamp(2.5rem,11.8vw,3.1rem);letter-spacing:-.07em}
+  .site-header + main .contact-section h2{font-size:clamp(2.5rem,11.8vw,3.1rem);letter-spacing:-.08em}
+  .site-header + main .collection h3{font-size:clamp(2rem,9vw,3rem)}
+  .site-header + main .hero-baseline{gap:10px 14px}
+}
