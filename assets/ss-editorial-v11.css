@@ -1,0 +1,53 @@
+/* SALVATORE SINATRA — VISUAL IDENTITY SYSTEM 11.0
+   Shared, progressive editorial layer. Non-destructive to original photography. */
+:root{--ss11-ink:#f2f0eb;--ss11-muted:#aaa9a4;--ss11-line:#44433f;--ss11-surface:#141413;--ss11-bg:#080808;--ss11-ease:cubic-bezier(.22,1,.36,1)}
+html[data-ss-theme="light"]{--ss11-ink:#191919;--ss11-muted:#565651;--ss11-line:#c7c6c1;--ss11-surface:#eeede8;--ss11-bg:#fafaf8}
+html{scroll-padding-top:clamp(78px,9vh,110px)}
+body{font-kerning:normal;text-rendering:optimizeLegibility}
+::selection{background:#d1cdc3;color:#101010}
+:where(a,button,input):focus-visible{outline:2px solid var(--ss11-ink);outline-offset:4px}
+:where(.top,.site-header,body>header){isolation:isolate}
+:where(.nav a,header nav a){text-decoration-thickness:1px;text-underline-offset:7px}
+:where(.hero) h1{font-feature-settings:"kern" 1;text-wrap:balance}
+:where(.section,.contact,.contact-section) h2{font-kerning:normal;text-wrap:balance}
+:where(.service,.item,.atlas-pillar-grid article,.atlas-project-list article,.atlas-directory article,.collection){
+  transition:border-color .35s var(--ss11-ease),background-color .35s var(--ss11-ease),transform .35s var(--ss11-ease)}
+:where(.service,.item,.atlas-pillar-grid article,.atlas-project-list article,.atlas-directory article,.collection):hover{border-color:var(--ss11-muted)}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  :where(.service,.item,.atlas-pillar-grid article,.atlas-project-list article,.atlas-directory article):hover{transform:translateY(-3px)}
+}
+.ss11-progress{position:fixed;inset:0 auto auto 0;z-index:12000;width:0;height:3px;pointer-events:none;background:var(--ss11-ink);box-shadow:0 0 10px #7775;transition:width .08s linear}
+.ss11-network{display:grid;grid-template-columns:minmax(190px,.9fr) minmax(0,2.1fr);align-items:stretch;gap:clamp(20px,4vw,70px);padding:26px clamp(22px,4.5vw,86px);background:var(--ss11-bg);border-top:1px solid var(--ss11-line);border-bottom:1px solid var(--ss11-line);color:var(--ss11-ink)}
+.ss11-network__heading{display:flex;flex-direction:column;gap:8px;justify-content:center}
+.ss11-network__eyebrow{color:var(--ss11-muted);font:600 10px/1.5 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.ss11-network__heading strong{font:400 clamp(20px,2.25vw,33px)/1.15 Georgia,serif;letter-spacing:-.035em}
+.ss11-network__links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid var(--ss11-line)}
+.ss11-network__link{display:flex;min-width:0;flex-direction:column;justify-content:center;gap:10px;padding:16px 20px;border-right:1px solid var(--ss11-line);text-decoration:none;color:inherit;transition:background-color .25s,color .25s}
+.ss11-network__link:hover,.ss11-network__link:focus-visible{background:var(--ss11-surface)}
+.ss11-network__link[aria-current="page"]{background:var(--ss11-surface)}
+.ss11-network__link small{font:600 9px/1.5 system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--ss11-muted)}
+.ss11-network__link span{font:500 clamp(12px,1vw,15px)/1.45 system-ui,sans-serif;overflow-wrap:anywhere}
+.ss11-network__link span:after{content:" ↗";color:var(--ss11-muted)}
+.ss11-network__link[aria-current="page"] span:after{content:" /"}
+#ss-photo-gallery-v10 .ss-photo-grid{gap:clamp(16px,2.3vw,32px)}
+#ss-photo-gallery-v10 figure{border-color:var(--ss11-line);transition:border-color .3s,background-color .3s}
+#ss-photo-gallery-v10 figure:hover{border-color:var(--ss11-ink);background:var(--ss11-surface)}
+#ss-photo-gallery-v10 .ss11-photo-trigger{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;cursor:zoom-in;text-align:inherit}
+#ss-photo-gallery-v10 .ss11-photo-trigger img{width:100%;height:auto;object-fit:contain}
+#ss-photo-gallery-v10 figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#ss-photo-gallery-v10 figcaption:after{content:"APRI ↗";font:600 9px/1.5 system-ui,sans-serif;letter-spacing:.15em;color:var(--ss11-muted)}
+.ss11-lightbox{border:1px solid #61615d;background:#090909;color:#f2f0eb;box-shadow:0 30px 100px #000b;padding:clamp(16px,3vw,36px);width:min(1180px,96vw);max-width:96vw;max-height:96dvh;overscroll-behavior:contain}
+.ss11-lightbox::backdrop{background:rgba(0,0,0,.92);backdrop-filter:blur(8px)}
+.ss11-lightbox__bar,.ss11-lightbox__nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.ss11-lightbox__bar{border-bottom:1px solid #42423f;padding-bottom:16px}
+.ss11-lightbox__eyebrow{font:600 10px/1.5 system-ui,sans-serif;letter-spacing:.21em;color:#a9a9a5}
+.ss11-lightbox button{font:600 11px/1.4 system-ui,sans-serif;letter-spacing:.12em;color:#f2f0eb;border:1px solid #686862;background:transparent;padding:11px 14px;cursor:pointer}
+.ss11-lightbox button:hover,.ss11-lightbox button:focus-visible{background:#ededeb;color:#111}
+.ss11-lightbox button:disabled{opacity:.35;cursor:not-allowed}
+.ss11-lightbox__image{display:block;width:100%;height:auto;max-height:calc(96dvh - 220px);object-fit:contain;margin:18px auto;background:#090909}
+.ss11-lightbox__nav{border-top:1px solid #42423f;padding-top:16px}
+.ss11-lightbox__caption{color:#bcbcb9;font:400 12px/1.5 system-ui,sans-serif;max-width:55%;text-align:center}
+.ss11-lightbox__count{color:#bcbcb9;font-size:11px}
+@media(max-width:900px){.ss11-network{grid-template-columns:1fr;gap:18px}.ss11-network__links{border-top:1px solid var(--ss11-line)}}
+@media(max-width:620px){.ss11-network{padding:24px 6vw}.ss11-network__links{grid-template-columns:1fr;border-left:0}.ss11-network__link{flex-direction:row;justify-content:space-between;gap:20px;border-right:0;border-bottom:1px solid var(--ss11-line);padding:16px 0}.ss11-network__link span{font-size:12px}.ss11-lightbox__caption{font-size:10px}.ss11-lightbox__nav{flex-wrap:wrap}.ss11-lightbox__nav button{flex:1}}
+@media(prefers-reduced-motion:reduce){.ss11-progress,.ss11-network__link,:where(.service,.item,.atlas-pillar-grid article,.atlas-project-list article,.atlas-directory article,.collection){transition:none!important}}
