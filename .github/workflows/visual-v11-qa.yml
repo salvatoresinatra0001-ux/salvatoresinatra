@@ -1,0 +1,34 @@
+name: Visual System 11 — Browser & Responsive QA
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [design/visual-system-11-20261029]
+permissions:
+  contents: read
+jobs:
+  visual-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated browser tooling
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Check site JavaScript syntax
+        run: |
+          node --check assets/ss-editorial-v11.js
+          node --check tests/visual-v11.mjs
+      - name: Test desktop and mobile in Chromium
+        run: node tests/visual-v11.mjs
+      - name: Upload browser screenshots and results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-v11-qa-${{ github.sha }}
+          path: qa-artifacts/
+          if-no-files-found: ignore
