@@ -5,7 +5,7 @@
  const top=document.createElement("button");
  top.type="button";top.className="ss12-top";top.setAttribute("aria-label","Torna all'inizio della pagina");top.title="Torna all'inizio";
  top.textContent="↑";document.body.appendChild(top);
- top.addEventListener("click",()=>{window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"});});
+ top.addEventListener("click",()=>{window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});
  let ticking=false;
  function update(){ticking=false;top.classList.toggle("is-visible",scrollY>520)}
  addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});update();

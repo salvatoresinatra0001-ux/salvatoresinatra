@@ -100,3 +100,10 @@ html[data-ss-theme="light"] .ss12-top{background:#f5f3ef;color:#111}
 @media(max-width:360px){.hero h1{font-size:clamp(2.7rem,12vw,3.25rem)}.display-title{font-size:clamp(2.6rem,11vw,3.2rem)}.contact-section h2{font-size:clamp(2.65rem,10.5vw,3.2rem)}.wordmark{gap:10px}.wordmark-name{font-size:9px}.monogram{font-size:29px}}
 @media(prefers-reduced-motion:reduce){.ss12-top,.photo-item img{transition:none!important}}
 @media print{.site-header,.ss12-top,.ss11-progress,.nav-toggle,.ss-theme-switch{display:none!important}body,.section,.contact-section{background:white!important;color:black!important}.ss12-biography p,.ss12-biography .lead,.ss12-statement blockquote{color:black!important}}
+
+/* V12.1 — measured title width, resilient focus and compact reading */
+.ss12-intro-heading .display-title{font-size:clamp(3.25rem,6.65vw,8rem);letter-spacing:-.085em;overflow-wrap:normal}
+@media(max-width:1100px){.ss12-intro-heading .display-title{font-size:clamp(3.25rem,9vw,7.4rem)}}
+@media(max-width:620px){.ss12-intro-heading .display-title{font-size:clamp(3.1rem,11.7vw,5.25rem)}}
+@media(max-width:360px){.ss12-intro-heading .display-title{font-size:clamp(2.6rem,11.3vw,3.2rem)}}
+html[data-ss-theme="light"] :where(a,button,input):focus-visible{outline-color:#171717}
