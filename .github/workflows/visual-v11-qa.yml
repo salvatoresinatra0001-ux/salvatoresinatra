@@ -27,6 +27,8 @@ jobs:
         run: node tests/visual-v11.mjs
       - name: Verify public production domains and static assets
         run: node tests/production-v11-smoke.mjs
+      - name: Verify live desktop and mobile interactions on public sites
+        run: node tests/live-browser-v11.mjs
       - name: Upload browser screenshots and results
         if: always()
         uses: actions/upload-artifact@v4
