@@ -397,3 +397,6 @@
 .ss-inline-style-6{cursor:pointer;font-size:.82rem;font-weight:650}
 .ss-inline-style-7{margin-top:12px}
 .ss-inline-style-8{margin-top:18px}
+
+/* Official brand marks in the social directory. */
+.social-platform-icon{width:20px;height:20px;display:inline-block;vertical-align:-.22em;margin-right:.55rem;fill:currentColor;flex-shrink:0}
