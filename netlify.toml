@@ -26,3 +26,21 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://www.google.com; font-src 'self'; connect-src 'self'; frame-src 'self' https://c51f5f9b62.clvaw-cdnwnd.com; upgrade-insecure-requests"
     Cache-Control = "public, max-age=3600"
+
+[[redirects]]
+  from = "/identity-atlas"
+  to = "/identity-atlas-v500/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/identity-atlas/"
+  to = "/identity-atlas-v500/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/identity-atlas/*"
+  to = "/identity-atlas-v500/:splat"
+  status = 301
+  force = true
