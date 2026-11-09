@@ -1,0 +1,20 @@
+/* Salvatore Sinatra | Compact editorial contact footer.
+   Additive layer: original photography and existing content remain unchanged. */
+.ss-contact-footer{box-sizing:border-box;min-width:0;width:100%;grid-column:1/-1;padding:0 0 clamp(28px,3vw,50px);margin:0 0 clamp(22px,2.8vw,40px);border-bottom:1px solid rgba(145,145,145,.45);color:inherit;text-align:left}
+.ss-contact-footer *{box-sizing:border-box}
+.ss-contact-footer__head{display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:16px 32px;margin-bottom:clamp(22px,3vw,38px)}
+.ss-contact-footer__kicker{display:block;margin-bottom:12px;font:600 11px/1.5 system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+.ss-contact-footer__head h2{font:400 clamp(27px,3.4vw,50px)/1.14 Georgia,"Times New Roman",serif;letter-spacing:-.04em;text-transform:none;margin:0;color:inherit;max-width:100%}
+.ss-contact-footer__head p{font:400 14px/1.6 system-ui,sans-serif;margin:0;max-width:440px;color:inherit;opacity:.75}
+.ss-contact-footer__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.25vw,22px)}
+.ss-contact-footer__item{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:9px;min-width:0;min-height:92px;padding:clamp(16px,1.8vw,26px);border:1px solid rgba(145,145,145,.45);background:transparent;color:inherit;text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
+.ss-contact-footer__item:hover,.ss-contact-footer__item:focus-visible{border-color:currentColor;background:rgba(145,145,145,.07);text-decoration:none}
+.ss-contact-footer__label{font:600 10px/1.5 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.72}
+.ss-contact-footer__value{font:500 clamp(12px,1.1vw,16px)/1.5 system-ui,sans-serif;overflow-wrap:anywhere;word-break:normal}
+.ss-contact-footer__social{display:flex;align-items:center;gap:12px 24px;flex-wrap:wrap;margin-top:clamp(18px,2vw,30px);font:500 12px/1.6 system-ui,sans-serif}
+.ss-contact-footer__social-label{letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.ss-contact-footer__social a{color:inherit;text-decoration:underline;text-underline-offset:5px;min-height:36px;display:inline-flex;align-items:center}
+.ss-contact-footer a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(max-width:850px){.ss-contact-footer__grid{grid-template-columns:1fr}.ss-contact-footer__item{min-height:70px;padding:16px 18px}.ss-contact-footer__head{align-items:start;flex-direction:column}}
+@media(min-width:2400px){.ss-contact-footer__head,.ss-contact-footer__grid,.ss-contact-footer__social{max-width:2000px;margin-left:auto;margin-right:auto}}
+@media(prefers-reduced-motion:reduce){.ss-contact-footer__item{transition:none}}
