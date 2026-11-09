@@ -122,7 +122,7 @@
       window.addEventListener('resize', updateReadingProgress);
       updateReadingProgress();
 
-      const facebookProfileUrl = 'https://www.facebook.com/profile.php?id=61594648539977';
+      const facebookProfileUrl = 'https://www.facebook.com/salvatore.sinatra.00.01';
       const facebookStorageKey = 'salvatoreSinatraFacebookPublicPostsV1';
       const facebookInputs = Array.from({ length: 5 }, (_, index) => document.getElementById('facebook-post-url-' + (index + 1)));
       const facebookFeedGrid = document.getElementById('facebook-feed-grid');
