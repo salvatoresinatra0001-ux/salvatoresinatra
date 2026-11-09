@@ -10,7 +10,7 @@ let browser;
 try{
   for(let i=0;i<50;i++){try{const r=await fetch("http://127.0.0.1:8765/index.html");if(r.ok)break;}catch{} await sleep(150);}
   browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
-  const sizes=[{name:"desktop",width:1440,height:900},{name:"tablet",width:768,height:1024},{name:"mobile",width:390,height:844},{name:"small-mobile",width:320,height:720}];
+  const sizes=[{name:"wide-desktop",width:1920,height:1080},{name:"ultrawide",width:3440,height:1440},{name:"desktop",width:1440,height:900},{name:"tablet",width:768,height:1024},{name:"mobile",width:390,height:844},{name:"small-mobile",width:320,height:720}];
   fs.mkdirSync("qa-artifacts",{recursive:true});
   for(const size of sizes){
     const page=await browser.newPage({viewport:{width:size.width,height:size.height},deviceScaleFactor:1,reducedMotion:"reduce"});
