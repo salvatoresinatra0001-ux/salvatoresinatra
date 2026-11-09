@@ -41,6 +41,11 @@ try{
     assert.equal(state.networkLinks,3,JSON.stringify(state));
     assert.equal(state.current,1,JSON.stringify(state));
     assert.equal(state.networkShown,true);
+    const contactFooter=page.locator("footer .ss-contact-footer");
+    assert.equal(await contactFooter.count(),1,"Canonical contact footer must be inside the semantic footer");
+    assert.equal(await contactFooter.locator(".ss-contact-footer__item").count(),3,"Expected three primary contact methods");
+    assert.equal(await contactFooter.locator(".ss-contact-footer__social a").count(),2,"Expected only the official Facebook and Instagram links");
+    assert.equal(await page.locator("#contatti-unificati").count(),1,"Duplicate contact footer");
     assert.equal(state.progress,true);
     assert.equal(state.heroVisible,true);
     assert.equal(state.headerVisible,true);
