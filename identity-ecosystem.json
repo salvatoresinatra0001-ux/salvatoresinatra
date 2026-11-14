@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "as_of": "2026-10-19",
+  "as_of": "2026-11-14",
   "owner": "Salvatore Sinatra",
   "canonical_requested": "https://www.salvatoresinatra.it/",
   "canonical_domain_verified": false,
@@ -9,34 +9,45 @@
     "branch": "main",
     "netlify_site": "salvatoresinatra-production",
     "netlify_site_id": "aff847eb-27b1-49b5-99ac-5ba56f015fdb",
-    "public_url": "https://salvatoresinatra-production.netlify.app/",
-    "last_verified_sha": "66f89cab33d5435d38cd9c1bf1050f6d35b60a33",
-    "last_verified_deploy": "6ad5b3ee919e57eb4248ac37"
+    "public_url": "https://www.salvatoresinatra.it/",
+    "last_verified_sha": "8a5506f6d24cb97a679fd74df2d39e7050f69362",
+    "last_verified_deploy": "6af7f733833a0501f57e7770",
+    "requested_url": "https://salvatoresinatra.it/",
+    "deploy_state": "ready",
+    "primary_host": "www",
+    "apex_status": "301",
+    "www_https_status": "200",
+    "tls_certificate_chain_verified": false
   },
   "repositories": [
     {
       "name": "salvatoresinatra",
-      "role": "canonical identity source",
+      "role": "independent identity and portfolio portal",
       "domain": "www.salvatoresinatra.it",
-      "domain_verified": false
+      "domain_verified": false,
+      "hosting": "Netlify"
     },
     {
       "name": "salvatore-sinatra-it",
-      "role": "historical Italian V10",
+      "role": "independent Italian identity and editorial portal",
       "domain": "www.salvatore-sinatra.it",
-      "domain_verified": false
+      "domain_verified": false,
+      "hosting": "GitHub Pages"
     },
     {
       "name": "salvatore-sinatra-web",
-      "role": "identity atlas and LuceVision archive",
+      "role": "separate GitHub Pages identity, academic and creative archive; not the LuceVision production source",
       "domain": null,
-      "domain_verified": false
+      "domain_verified": false,
+      "hosting": "GitHub Pages",
+      "github_pages_url": "https://salvatoresinatra0001-ux.github.io/salvatore-sinatra-web/"
     },
     {
       "name": "salvatoresinatraphotography",
       "role": "independent photography portfolio",
       "domain": "www.salvatoresinatraphotography.it",
-      "domain_verified": false
+      "domain_verified": false,
+      "hosting": "GitHub Pages"
     },
     {
       "name": "salvatoresinatra0001-ux.github.io",
@@ -46,5 +57,129 @@
     }
   ],
   "do_not_auto_redirect": true,
-  "master_photographs_unchanged": true
+  "master_photographs_unchanged": true,
+  "sites": [
+    {
+      "domain": "https://salvatoresinatra.it/",
+      "primary_url": "https://www.salvatoresinatra.it/",
+      "purpose": "identity and editorial portfolio",
+      "independent": true,
+      "hosting": "Netlify",
+      "project": "salvatoresinatra-production",
+      "repository": "salvatoresinatra0001-ux/salvatoresinatra",
+      "branch": "main",
+      "content_commit": "8a5506f6d24cb97a679fd74df2d39e7050f69362",
+      "deploy": "6af7f733833a0501f57e7770",
+      "deploy_state": "ready",
+      "git_sync": true,
+      "apex_status": "301",
+      "www_https_status": "200",
+      "robots": "present; source updated to www",
+      "sitemap": "present; source updated to www",
+      "tls_chain_verified": false
+    },
+    {
+      "domain": "https://www.salvatore-sinatra.it/",
+      "purpose": "independent Italian identity and editorial portal",
+      "independent": true,
+      "hosting": "GitHub Pages",
+      "repository": "salvatoresinatra0001-ux/salvatore-sinatra-it",
+      "branch": "main",
+      "content_commit": "047e4459c8546380de29630ce9eaacd3582e6cdc",
+      "pages_workflow": "success",
+      "robots": "present in repository",
+      "sitemap": "present in repository",
+      "live_http_verified": false,
+      "tls_chain_verified": false
+    },
+    {
+      "domain": "https://www.salvatoresinatraphotography.it/",
+      "purpose": "independent photography portfolio",
+      "independent": true,
+      "hosting": "GitHub Pages",
+      "repository": "salvatoresinatra0001-ux/salvatoresinatraphotography",
+      "branch": "main",
+      "content_commit": "e0c7cc8f9bf3da690ecd7cc2805bcd83077d5476",
+      "pages_workflow": "success",
+      "robots": "present in repository",
+      "sitemap": "present in repository",
+      "live_page_fetched": true,
+      "tls_chain_verified": false,
+      "photo_assets": 14,
+      "shared_blob_sha_with": "salvatore-sinatra-it"
+    },
+    {
+      "domain": "https://www.lucevision.it/",
+      "purpose": "independent creative portal",
+      "independent": true,
+      "hosting": "Netlify",
+      "project": "lucevision-web",
+      "deploy": "6adc16da787b33fdaa82017a",
+      "deploy_state": "ready",
+      "deploy_source": "api",
+      "manual_deploy": false,
+      "commit_ref": null,
+      "git_sync": false,
+      "reference_repository": "salvatoresinatra0001-ux/salvatore-sinatra-web",
+      "reference_repository_is_production_source": false,
+      "apex_status": "301",
+      "www_https_status": "200",
+      "robots": "not verified",
+      "sitemap": "not verified",
+      "tls_chain_verified": false
+    },
+    {
+      "domain": "https://www.salvatoresinatraphotography.online/",
+      "purpose": "independent photography site",
+      "independent": true,
+      "hosting": "Netlify",
+      "project": "salvatore-sinatra-photography",
+      "deploy": "6adc1f67c688aab954733438",
+      "deploy_state": "ready",
+      "deploy_source": "drop",
+      "manual_deploy": true,
+      "commit_ref": null,
+      "git_sync": false,
+      "apex_status": "301",
+      "www_https_status": "200",
+      "robots": "404",
+      "sitemap": "not verified",
+      "tls_chain_verified": false,
+      "deploy_summary": "1 HTML page; no separate assets listed"
+    },
+    {
+      "domain": "https://www.salvatoresinatraphotography.net/",
+      "purpose": "independent photography and curriculum site",
+      "independent": true,
+      "hosting": "Netlify",
+      "project": "salvatore-sinatra-photography-net",
+      "deploy": "6ad2f85bb72efe8ca0ca1a88",
+      "deploy_state": "ready",
+      "deploy_source": "drop",
+      "manual_deploy": true,
+      "commit_ref": null,
+      "git_sync": false,
+      "apex_status": "301",
+      "www_https_status": "200",
+      "robots": "404",
+      "sitemap": "not verified",
+      "tls_chain_verified": false,
+      "deploy_summary": "2 HTML pages and 16 assets",
+      "document_paths": [
+        "/documenti/curriculum.html",
+        "/documenti/biografia.html"
+      ],
+      "document_http_verified": false,
+      "privacy_review": "not verified"
+    }
+  ],
+  "audit_notes": {
+    "domain_plurality_is_intentional": true,
+    "no_cross_domain_redirects_or_migrations_applied": true,
+    "manual_drop_is_not_a_malfunction": true,
+    "tls_certificate_chain_expiry_not_independently_verified": true,
+    "performance_lighthouse_not_run": true,
+    "original_photographs_not_modified": true,
+    "privacy_review_of_net_documents": "not verified; no document content reproduced"
+  }
 }
